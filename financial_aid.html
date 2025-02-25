@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Aid - Academic Advisor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Academic Advisor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="major_selection.html">Choose Major</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="study_plan.html">Study Plan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="semester_scheduler.html">Schedule Semester</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="financial_aid.html">Financial Aid</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="mb-4">Financial Aid Assistant</h1>
+                
+                <!-- Progress Tracker -->
+                <div class="progress-tracker mb-4">
+                    <div class="progress" style="height: 4px;">
+                        <div class="progress-bar" role="progressbar" id="progressBar"></div>
+                    </div>
+                    <div class="steps d-flex justify-content-between mt-2">
+                        <div class="step active" data-step="1">FAFSA</div>
+                        <div class="step" data-step="2">Scholarships</div>
+                        <div class="step" data-step="3">Loans</div>
+                        <div class="step" data-step="4">Review</div>
+                    </div>
+                </div>
+
+                <!-- Step Content -->
+                <div class="step-content">
+                    <!-- FAFSA Section -->
+                    <div class="step-section" id="step1">
+                        <h3>Complete Your FAFSA</h3>
+                        <div class="alert alert-info">
+                            <strong>Priority Deadline:</strong> March 1st for the upcoming academic year
+                        </div>
+                        <div class="checklist mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="fafsa1">
+                                <label class="form-check-label" for="fafsa1">
+                                    Create FSA ID at studentaid.gov
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="fafsa2">
+                                <label class="form-check-label" for="fafsa2">
+                                    Gather required documents (tax returns, bank statements)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="fafsa3">
+                                <label class="form-check-label" for="fafsa3">
+                                    Complete FAFSA application
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="nextStep()">Next: Scholarships</button>
+                    </div>
+
+                    <!-- Additional steps will be shown/hidden via JavaScript -->
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Important Dates</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <strong>FAFSA Opens:</strong> October 1st
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Priority Deadline:</strong> March 1st
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Scholarship Deadline:</strong> April 15th
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Need Help?</h5>
+                        <p class="card-text">Contact our Financial Aid Office:</p>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-telephone"></i> (555) 123-4567</li>
+                            <li><i class="bi bi-envelope"></i> finaid@university.edu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/financial_aid.js"></script>
+    
+    <!-- Copyright Section -->
+    <div class="copyright-section py-3 bg-dark text-white text-center">
+        <p class="mb-0">&copy; 2025 Academic Advisor. All rights reserved.</p>
+    </div>
+</body>
+</html> 

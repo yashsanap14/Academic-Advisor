@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Major - Academic Advisor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Replace the existing navigation section with this -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Academic Advisor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="major_selection.html">Choose Major</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="study_plan.html">Study Plan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="semester_scheduler.html">Schedule Semester</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="financial_aid.html">Financial Aid</a>
+                    <!-- </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="quiz-container">
+                    <h1 class="text-center mb-4">Find Your Perfect Major</h1>
+                    <p class="text-center mb-5">Answer these questions to discover majors that align with your interests.</p>
+
+                    <!-- Progress Bar with Icons -->
+                    <div class="progress-container mb-4">
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar" role="progressbar" id="quizProgress"></div>
+                        </div>
+                        <div class="progress-icons mt-2">
+                            <div class="icon-step active" data-step="1">
+                                <i class="bi bi-building"></i>
+                                <span>Work Environment</span>
+                            </div>
+                            <div class="icon-step" data-step="2">
+                                <i class="bi bi-book"></i>
+                                <span>Academic Interest</span>
+                            </div>
+                            <div class="icon-step" data-step="3">
+                                <i class="bi bi-puzzle"></i>
+                                <span>Project Type</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question Container -->
+                    <div id="questionContainer" class="card p-4 mb-4 fade-in">
+                        <h3 id="questionText" class="mb-4"></h3>
+                        <div id="optionsContainer" class="d-grid gap-3">
+                            <!-- Options will be inserted here -->
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-outline-primary" onclick="previousQuestion()" id="prevBtn" style="display: none;">
+                            Previous
+                        </button>
+                        <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">
+                            Next
+                        </button>
+                    </div>
+
+                    <!-- Results Container -->
+                    <div id="resultsContainer" style="display: none;" class="fade-in">
+                        <h2 class="text-center mb-4">Your Recommended Majors</h2>
+                        
+                        <!-- Answer Summary -->
+                        <div class="answer-summary mb-4">
+                            <h4>Your Responses:</h4>
+                            <ul id="answerSummary" class="list-group mb-4">
+                                <!-- Answer summary will be inserted here -->
+                            </ul>
+                        </div>
+
+                        <!-- Major Recommendations -->
+                        <div class="row g-4" id="recommendedMajors">
+                            <!-- Recommended majors will be inserted here -->
+                        </div>
+
+                        <!-- Major Comparison Section -->
+                        <div class="comparison-section mt-5" style="display: none;">
+                            <h3 class="text-center mb-4">Compare Selected Majors</h3>
+                            <div class="table-responsive">
+                                <table class="table table-bordered comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Criteria</th>
+                                            <!-- Major columns will be added dynamically -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Core Courses</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Career Paths</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Job Market Demand</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Average Starting Salary</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Required Skills</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Major Selection Modal -->
+    <div class="modal fade" id="majorModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirm Major Selection</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>You've selected <span id="selectedMajorName"></span>. Would you like to proceed with this choice?</p>
+                    <p class="text-muted">You can always change your major later.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="confirmMajor()">Confirm Selection</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/major_selection.js"></script>
+    
+    <!-- Move copyright section outside any containers -->
+    <div class="copyright-section py-3 bg-dark text-white text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Academic Advisor. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html> 

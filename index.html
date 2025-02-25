@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Advisor - Your Path to Success</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Add Counter Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Wrap all content except footer in main-content div -->
+    <div class="main-content">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Academic Advisor</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="major_selection.html">Choose Major</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="study_plan.html">Study Plan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="semester_scheduler.html">Schedule Semester</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="financial_aid.html">Financial Aid</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li> -->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Updated Hero Section -->
+        <header class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="hero-content">
+                            <h1 class="display-4 fw-bold mb-4">Your Academic Journey Starts Here</h1>
+                            <p class="lead mb-4">Get personalized guidance for your college experience through our comprehensive advising services.</p>
+                            <div class="cta-buttons">
+                                <a href="major_selection.html" class="btn btn-primary btn-lg me-3" 
+                                   data-bs-toggle="tooltip" title="Take our quiz to find your perfect major">
+                                    Find Your Major
+                                </a>
+                                <!-- <button class="btn btn-outline-primary btn-lg" data-bs-toggle="tooltip" 
+                                        title="Book a session with our advisors">
+                                    Schedule Advising
+                                </button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image">
+                            <img src="components/images/hero_section_preview_rev_1.png" alt="Academic Advising" 
+                                 class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Vision & Mission Section -->
+        <section class="vision-mission py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="mb-4">Our Vision</h2>
+                        <p>Academic advising is an integral part of the educational process that enhances student learning and development by supporting, teaching, and connecting students to curricular and co-curricular experiences.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="mb-4">Our Mission</h2>
+                        <p>We commit to creating ongoing, personal, and purposeful educational partnerships with students. Our advisors help you:</p>
+                        <ul>
+                            <li>Find degree pathways matching your interests</li>
+                            <li>Set and reach educational goals</li>
+                            <li>Connect to campus resources and opportunities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Counter Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="counter-box text-center" data-aos="fade-up">
+                            <div class="counter" data-target="2500">0</div>
+                            <p>Students Advised</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="counter-box text-center" data-aos="fade-up" data-aos-delay="100">
+                            <div class="counter" data-target="5000">0</div>
+                            <p>Personalized Plans Created</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="counter-box text-center" data-aos="fade-up" data-aos-delay="200">
+                            <div class="counter" data-target="97">0</div>
+                            <p>Student Satisfaction Rate (%)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Cards -->
+        <section class="features py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">How We Help You Succeed</h2>
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <a href="major_selection.html" class="card-link">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <img src="components/images/plural.png" alt="Choose Major" class="feature-icon mb-3">
+                                    <h5 class="card-title">Choose Your Major</h5>
+                                    <p class="card-text">Take our interactive quiz to find the perfect major for you.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="study_plan.html" class="card-link">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <img src="components/images/book.png" alt="Plan Studies" class="feature-icon mb-3">
+                                    <h5 class="card-title">Plan Your Studies</h5>
+                                    <p class="card-text">Create a personalized study plan that fits your goals.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="semester_scheduler.html" class="card-link">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <img src="components/images/calendar.png" alt="Schedule Classes" class="feature-icon mb-3">
+                                    <h5 class="card-title">Schedule Classes</h5>
+                                    <p class="card-text">Organize your semester with our intuitive scheduler.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="financial_aid.html" class="card-link">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <img src="components/images/loan.png" alt="Financial Guidance" class="feature-icon mb-3">
+                                    <h5 class="card-title">Financial Guidance</h5>
+                                    <p class="card-text">Navigate financial aid and scholarship opportunities.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Testimonials Section -->
+        <section class="testimonials py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Student Success Stories</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <img src="components/images/girl-student-hand-hug-book.jpg" alt="Student" class="testimonial-img">
+                                <h5>Sarah Johnson</h5>
+                                <p class="text-muted">Computer Science, Class of 2023</p>
+                                <p>"The academic advisors helped me navigate my course selections perfectly. I'm now working at a top tech company!"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <img src="components/images/portrait-male-student-with-books.jpg" alt="Student" class="testimonial-img">
+                                <h5>Michael Chen</h5>
+                                <p class="text-muted">Business Administration, Class of 2022</p>
+                                <p>"The study plan tools made it easy to stay on track with my degree requirements while balancing my internship."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <img src="components/images/fs1.webp" alt="Student" class="testimonial-img">
+                                <h5>Emily Rodriguez</h5>
+                                <p class="text-muted">Psychology, Class of 2023</p>
+                                <p>"Thanks to the financial aid guidance, I was able to secure scholarships that made my education possible."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Update the Tagline Section -->
+        <section class="tagline-section py-5 bg-primary text-white text-center">
+            <div class="container">
+                <h2 class="display-5">"ALL PATHS TO SUCCESS"</h2>
+                <p class="lead mt-3">Where Every Student's Journey is Unique, Every Dream is Supported</p>
+                <div class="mt-4">
+                    <a href="major_selection.html" class="btn btn-light btn-lg px-5 py-3 fw-bold">
+                        Get Started <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                    <p class="mt-3">Take the first step towards your academic success</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section
+        <section class="how-it-works py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">How It Works</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="step-card text-center">
+                            <div class="step-icon mb-3">
+                                <img src="assets/images/quiz-icon.svg" alt="Quiz Icon">
+                            </div>
+                            <h3>Take the Academic Quiz</h3>
+                            <p>Answer a few questions about your interests and goals to get personalized recommendations.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="step-card text-center">
+                            <div class="step-icon mb-3">
+                                <img src="assets/images/plan-icon.svg" alt="Plan Icon">
+                            </div>
+                            <h3>Get a Study Plan</h3>
+                            <p>Receive a customized study plan based on your major choice and academic goals.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="step-card text-center">
+                            <div class="step-icon mb-3">
+                                <img src="assets/images/schedule-icon.svg" alt="Schedule Icon">
+                            </div>
+                            <h3>Schedule Advising</h3>
+                            <p>Book a session with our expert advisors to refine your academic journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Partner Universities Section -->
+        <!-- <section class="universities py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Where Our Students Go</h2>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="university-card" data-bs-toggle="tooltip" title="Click to learn more about Harvard">
+                            <img src="assets/images/universities/harvard.svg" alt="Harvard University">
+                            <h4>George Mason University</h4>
+                            <p class="text-muted">Fairfax, VA</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="university-card" data-bs-toggle="tooltip" title="Click to learn more about MIT">
+                            <img src="assets/images/universities/mit.svg" alt="MIT">
+                            <h4>Massachusetts Institute of Technology</h4>
+                            <p class="text-muted">Cambridge, MA</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="university-card" data-bs-toggle="tooltip" title="Click to learn more about Stanford">
+                            <img src="assets/images/universities/stanford.svg" alt="Stanford University">
+                            <h4>Stanford University</h4>
+                            <p class="text-muted">Stanford, CA</p>
+                        </div>
+                    </div>
+                    <!-- <div class="col">
+                        <div class="university-card" data-bs-toggle="tooltip" title="Click to learn more about Yale">
+                            <img src="assets/images/universities/yale.svg" alt="Yale University">
+                            <h4>Yale University</h4>
+                            <p class="text-muted">New Haven, CT</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="university-card" data-bs-toggle="tooltip" title="Click to learn more about Princeton">
+                            <img src="assets/images/universities/princeton.svg" alt="Princeton University">
+                            <h4>Princeton University</h4>
+                            <p class="text-muted">Princeton, NJ</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="university-card" data-bs-toggle="tooltip" title="Click to learn more about Columbia">
+                            <img src="assets/images/universities/columbia.svg" alt="Columbia University">
+                            <h4>Columbia University</h4>
+                            <p class="text-muted">New York, NY</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="university-card" data-bs-toggle="tooltip" title="Click to learn more about Berkeley">
+                            <img src="assets/images/universities/berkeley.svg" alt="UC Berkeley">
+                            <h4>UC Berkeley</h4>
+                            <p class="text-muted">Berkeley, CA</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="university-card" data-bs-toggle="tooltip" title="Click to learn more about UPenn">
+                            <img src="assets/images/universities/upenn.svg" alt="University of Pennsylvania">
+                            <h4>University of Pennsylvania</h4>
+                            <p class="text-muted">Philadelphia, PA</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="university-card" data-bs-toggle="tooltip" title="Click to learn more about Cornell">
+                            <img src="assets/images/universities/cornell.svg" alt="Cornell University">
+                            <h4>Cornell University</h4>
+                            <p class="text-muted">Ithaca, NY</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Meet Our Advisors Section -->
+        <section class="advisors py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Meet Our Advisors</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="advisor-card">
+                            <img src="components/images/f1.webp" alt="Dr. Sarah Johnson" 
+                                 class="advisor-image mb-3">
+                            <h3>Dr. Sarah Johnson</h3>
+                            <p class="text-muted">Engineering & Computer Science</p>
+                            <p>15+ years of experience in academic advising, specializing in STEM fields.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="advisor-card">
+                            <img src="components/images/m1.webp" alt="Prof. Michael Chen" 
+                                 class="advisor-image mb-3">
+                            <h3>Prof. Michael Chen</h3>
+                            <p class="text-muted">Business & Economics</p>
+                            <p>Former industry executive with 10+ years in academic counseling.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="advisor-card">
+                            <img src="components/images/m2.webp" alt="Dr. Emily Rodriguez" 
+                                 class="advisor-image mb-3">
+                            <h3>Dr. Rohit Motdhare</h3>
+                            <p class="text-muted">Arts & Humanities</p>
+                            <p>PhD in Education with expertise in liberal arts and creative fields.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <p>Academic Advisor</p>
+                        <p>Empowering students to make informed decisions about their academic journey.</p>
+                    </div>
+                    <div class="social-links mt-3">
+                        <a href="#" class="social-link"><img src="components/images/icons8-facebook-48.png" alt="Facebook"></a>
+                        <a href="#" class="social-link"><img src="components/images/icons8-x-50.png" alt="X"></a>
+                        <a href="#" class="social-link"><img src="components/images/icons8-linkedin-48.png" alt="LinkedIn"></a>
+                        <a href="#" class="social-link"><img src="components/images/icons8-instagram-48.png" alt="Instagram"></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Career Resources</a></li>
+                        <li><a href="#">Partner Universities</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Us</h5>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-envelope"></i> support@academicadvisor.com</li>
+                        <li><i class="bi bi-telephone"></i> (555) 123-4567</li>
+                        <li><i class="bi bi-geo-alt"></i> 123 Education St, Suite 100</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3 border-top border-secondary">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2025 Academic Advisor. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="text-white me-3">Privacy Policy</a>
+                        <a href="#" class="text-white">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Replace the existing fab div with this AI Chat Widget -->
+    <div class="ai-chat-widget">
+        <div class="chat-popup" id="chatPopup">
+            <div class="chat-header">
+                <h5><i class="bi bi-robot"></i> EduAI Assistant</h5>
+                <button class="close-btn" onclick="toggleChat()">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-message bot">
+                    <p>👋 Hi! I'm EduAI, your academic assistant. I can help you with:</p>
+                    <div class="quick-actions">
+                        <button onclick="handleQuickAction('major')">Find Your Major</button>
+                        <button onclick="handleQuickAction('scholarship')">Scholarship Search</button>
+                        <button onclick="handleQuickAction('schedule')">Class Scheduling</button>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Type your question..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()" class="send-button">
+                    <i class="bi bi-send-fill"></i>
+                </button>
+            </div>
+        </div>
+        <button class="chat-toggle" onclick="toggleChat()" aria-label="Chat with EduAI">
+            <img src="components/images/chat-bot.png" alt="Bot" class="bot-icon">
+            <span class="notification-dot"></span>
+        </button>
+    </div>
+
+    <!-- Add before closing body tag -->
+    <script src="js/chat.js"></script>
+</body>
+</html> 
